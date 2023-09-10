@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        nav,
+        .scroll-container {
+            display: block;
+            margin:  5px;
+
+        }
+
+        nav {
+            width: 339px;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        .header{
+            background-color:coral;
+        }
+
+
+
+      
+    </style>
+
+
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background: #000000 url('https://img.freepik.com/premium-vector/cute-cat-paw-print-road-free-vector_563808-55.jpg?w=900') 60% 10% ";
+    <div class="scroll-container">
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:rosybrown;">
+            <div id="header">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <img src="https://www.pinclipart.com/picdir/big/533-5332157_sleeping-jack-russell-terrier-clipart-clipart-jack-russell.png" height="80" width="90">
+                    </div>
+
+                    <div class="navbar-collapse collapse" id="header1" style="background-color: antiquewhite; font-size: 25px; color: coral;">
+                        <ul class="nav navbar-nav">
+
+                            <li>@Html.ActionLink("Psy", "Beginning", "Dog")</li>
+                            <li>@Html.ActionLink("Dodaj psa", "Add", "Dog")</li>
+                            <li>@Html.ActionLink("Znajdź psa", "Search", "Dog")</li>
+                            <li>@Html.ActionLink("                 ", "            ", "      ")</li>
+                            <li>@Html.ActionLink("                 ", "            ", "      ")</li>
+                            <li>@Html.ActionLink("                 ", "            ", "      ")</li>
+                            <li>@Html.ActionLink("                 ", "            ", "      ")</li>
+                            <li>@Html.ActionLink("                 ", "            ", "      ")</li>
+                            <li>@Html.ActionLink("                 ", "            ", "      ")</li>
+                            <li>@Html.ActionLink("                 ", "            ", "      ")</li>
+                            <li>@Html.ActionLink("                 ", "            ", "      ")</li>
+
+
+                        </ul>
+                        <hr />
+                        <a class="btn btn-danger" id="button" style="background-color:#f4c3a0; color:black; " href="@Url.Action("LogOff", "Account")">Wyloguj się</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <!--
+        <footer style="background-color:rosybrown">
+            <p>&copy; @DateTime.Now.Year - My Application</p>
+        </footer>
+        -->
+        </div>
+    
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+        </div>
+</body>
+</html>

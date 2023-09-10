@@ -1,0 +1,66 @@
+﻿@model TestApp.Models.Dog
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<div class="panel-primary">
+    <div class="heading" style="background-color:white; width:250px; height:50px">
+        <h2> Edytuj dane psa </h2>
+    </div>
+    <div class="pane-body" style="font-size:18px; background-color:white; width:290px">
+        <label>Zdjęcie</label>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="File" />
+
+            <input type="hidden" name="Id" value="@Html.DisplayTextFor(m=>m.Id)" />
+            <div class="form-group">
+                <label>Imię</label>
+                <input class="form-control" type="text" name="Name" value="@Html.DisplayTextFor(m=>m.Name)" />
+            </div>
+
+            <div class="form-group">
+                <label>Płeć</label>
+                <input class="form-control" type="text" name="Gender" value="@Html.DisplayTextFor(m=>m.Gender)" />
+            </div>
+
+            <div class="form-group">
+                <label>Data</label>
+                <input class="form-control" type="text" name="DateOfArrival" value="@Html.DisplayTextFor(m=>m.DateOfArrival)" />
+            </div>
+
+            <div class="form-group">
+                <label>Wiek</label>
+                <input class="form-control" type="text" name="Age" value="@Html.DisplayTextFor(m=>m.Age)" />
+            </div>
+
+            <div class="form-group">
+                <label>Wielkość</label>
+                <input class="form-control" type="text" name="Size" value="@Html.DisplayTextFor(m=>m.Size)" />
+            </div>
+
+            <div class="form-group">
+                <label>Do domu z dziećmi</label>
+                <input class="form-control" type="text" name="ChildFriendly" value="@Html.DisplayTextFor(m=>m.ChildFriendly)" />
+            </div>
+
+            <div class="form-group">
+                <label>Do domu z innymi zwierzętami</label>
+                <input class="form-control" type="text" name="PetFriendly" value="@Html.DisplayTextFor(m=>m.PetFriendly)" />
+            </div>
+
+            <hr />
+            <button type="submit" class="btn btn-primary" style="font-size:16px;">Zatwierdź</button>
+            <a class="btn btn-danger" style="font-size:16px; width:80px" href="@Url.Action("Beginning", "Dog")"> Anuluj </a>
+            <a></a>
+        </form>
+
+    </div>
+</div>
+
+
+
+
+

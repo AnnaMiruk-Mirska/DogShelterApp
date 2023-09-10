@@ -1,0 +1,88 @@
+﻿@model TestApp.Models.Dog
+
+@{
+    ViewBag.Title = "Info";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+        <div class="heading" style="background-color:white; width:250px; height:80px; ">
+            <h2> Szczegółowe informacje </h2>
+        </div>
+
+        <dd>
+            <img src="@Html.DisplayFor(model => model.Img)" style="width:300px; height:400px; ">
+        </dd>
+
+
+        <dt style="font-size: 20px; background-color: white; width: 350px; text-align: right; ">
+            Imię:&emsp;
+        </dt>
+
+        <dd style="font-size: 20px; background-color: white; width: 350px; margin-right: auto;">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt style="font-size: 20px; background-color: white; width: 350px; text-align: right;">
+            Płeć:&emsp;
+        </dt>
+
+        <dd style="font-size: 20px; background-color: white; width: 350px; margin-right: auto; ">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt style="font-size: 20px; background-color: white; width: 350px; text-align: right;">
+            Data:&emsp;
+        </dt>
+
+        <dd style="font-size: 20px; background-color: white; width: 350px; margin-right: auto; ">
+            @Html.DisplayFor(model => model.DateOfArrival)
+        </dd>
+
+        <dt style="font-size: 20px; background-color: white; width: 350px; text-align: right;">
+            Wiek:&emsp;
+        </dt>
+
+        <dd style="font-size: 20px; background-color: white; width: 350px; margin-right: auto; ">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt style="font-size: 20px; background-color: white; width: 350px; text-align: right;">
+            Wielkość:&emsp;
+        </dt>
+
+        <dd style="font-size: 20px; background-color: white; width: 350px; margin-right: auto; ">
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+
+        <dt style="font-size: 20px; background-color: white; width: 350px; text-align:right;">
+            Do domu z dziećmi:&emsp;
+        </dt>
+
+        <dd style="font-size: 20px; background-color: white; width: 350px; margin-right: auto; ">
+            @Html.DisplayFor(model => model.ChildFriendly)
+        </dd>
+
+        <dt style="font-size:20px; background-color:white; width:350px; text-align:right;">
+            Do domu z innymi zwierzętami:&emsp;
+        </dt>
+
+        <dd style="font-size: 20px; background-color: white; width: 350px; margin-right:auto;">
+            @Html.DisplayFor(model => model.PetFriendly)
+        </dd>
+
+    </dl>
+</div>
+<p style="font-size:18px; color:black">
+    @Html.ActionLink("Powrót", "Beginning") |
+    @Html.ActionLink("Edytuj", "Edit", new { id = Model.Id })
+
+</p>

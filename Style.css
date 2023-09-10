@@ -1,0 +1,23 @@
+﻿
+
+body {
+    overflow: scroll;
+    background-blend-mode: luminosity;
+    background-size: unset;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+#header {
+    background-color:darkslateblue;
+}
+#cards {
+    background-color: white;
+}
+
+#button {
+    position: relative;
+    left: 80px;
+}
+
+

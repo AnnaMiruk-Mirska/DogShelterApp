@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<br />
+<div class="panel-primary">
+    <div class="heading" style="background-color:white; width:150px; height:50px">
+        <h2> Dodaj psa </h2>
+    </div>
+    <div class="pane-body" style="font-size:18px; background-color:white; width:290px">
+
+        <label>Zdjęcie</label>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="File" />
+
+
+            <div class="form-group">
+                <label>Imię</label>
+                <input class="form-control" type="text" name="Name" />
+            </div>
+
+            <div class="form-group">
+                <label>Płeć</label>
+                <input class="form-control" type="text" name="Gender" />
+            </div>
+
+            <div class="form-group">
+                <label>Data</label>
+                <input class="form-control" type="text" name="DateOfArrival" />
+            </div>
+
+            <div class="form-group">
+                <label>Wiek</label>
+                <input class="form-control" type="text" name="Age" />
+            </div>
+
+            <div class="form-group">
+                <label>Wielkość</label>
+                <input class="form-control" type="text" name="Size" />
+            </div>
+
+            <div class="form-group">
+                <label>Do domu z dziećmi</label>
+                <input class="form-control" type="text" name="ChildFriendly" />
+            </div>
+
+            <div class="form-group">
+                <label>Do domu z innymi zwierzętami</label>
+                <input class="form-control" type="text" name="PetFriendly" />
+            </div>
+
+            <div class="form-group">
+
+
+
+            </div>
+
+
+
+            @*
+
+            @using (Html.BeginForm("Create", "Content", FormMethod.Post, new { enctype = "multipart/form-data" }))
+           // {
+           //     <input type="file" name="ImageImg" id="ImageImg" onchange="fileCheck(this);" />
+           // }
+
+
+            @* @using (Html.BeginForm("Add", "Dog", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        // {
+        //     <label for="file">Wynierz zdjęcie:</label>
+        //     <input type="file" name="file" id="file" /><br><br>
+        //     <input type="submit" value="Dodaj zdjęcie" />
+        //     <br><br>
+        //     @ViewBag.Message
+        // }
+
+        <hr /> *@
+            <button type="submit" class="btn btn-primary" style="font-size:16px; width:80px">Dodaj</button>
+            <a class="btn btn-danger" style="font-size:16px; width:80px" href="@Url.Action("Beginning", "Dog")">Anuluj</a>
+        </form>
+
+    </div>
+</div>
+
+
